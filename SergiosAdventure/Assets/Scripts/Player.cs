@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     private int bravery;
 
     private Stack<string> decisionTacker;
+    private List<Item> inventory;
 
     public Player(string name, int initialHealth, int initialAttack, int initialBravery)
     {
@@ -25,6 +26,7 @@ public class Player : MonoBehaviour
         attack = initialAttack;
         bravery = initialBravery;
         decisionTacker = new Stack<string>();
+        inventory = new List<Item>();
     }
     public void TakeDamage(int amount)
     {
@@ -53,7 +55,19 @@ public class Player : MonoBehaviour
                 bravery += delta;
                 break;
         }
-    }    
+    }
+    public void AddItem(Item item)
+    {
+        if (item == null) return;
+        inventory.Add(item);
+    }
+    public void RemoveItem(Item item)
+    {
+        if (item != null && inventory.Contains(item))
+        {
+            inventory.Remove(item);
+        }
+    }
     public void PushDecision(string decisionId)
     {
         decisionTacker.Push(decisionId);
@@ -77,6 +91,8 @@ public class Player : MonoBehaviour
     public int GetAttack() => attack;
     public int GetBravery() => bravery;
     public bool IsAlive() => health > 0;
+    public int GetInventoryCount() => inventory.Count;
+    public bool HasItem(Item item) => inventory.Contains(item);
 
     public int GetStatValue(StatType stat)
     {
@@ -88,4 +104,11 @@ public class Player : MonoBehaviour
             default: return 0;
         }
     }
+    public Item GetItemAtIndex(int index)
+    {
+        if (index >= 0 && index < inventory.Count)
+            return inventory[index];
+        return null;
+    }
+    public List<Item> GetAllItems() => new List<Item>(inventory);
 }
