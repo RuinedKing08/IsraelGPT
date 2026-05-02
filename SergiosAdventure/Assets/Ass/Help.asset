@@ -19,6 +19,10 @@ MonoBehaviour:
     body: juan is attack
     type: 1
     enemyId: 
+    victoryNodeId: 
+    defeatNodeId: 
+    endingId: 
+    endingName: 
     choices:
     - text: stay home
       nextNodeId: ending_1
@@ -39,6 +43,10 @@ MonoBehaviour:
     body: you do nothing and sleep it off
     type: 3
     enemyId: 
+    victoryNodeId: 
+    defeatNodeId: 
+    endingId: 
+    endingName: 
     choices:
     - text: stay home
       nextNodeId: situation_2
@@ -59,6 +67,10 @@ MonoBehaviour:
     body: you find juan and he challenges u
     type: 1
     enemyId: 
+    victoryNodeId: 
+    defeatNodeId: 
+    endingId: 
+    endingName: 
     choices:
     - text: run away
       nextNodeId: ending_1
@@ -78,7 +90,35 @@ MonoBehaviour:
     title: faito
     body: u vs juan
     type: 2
+    enemyId: DebugWolf
+    victoryNodeId: ending_2
+    defeatNodeId: ending_1
+    endingId: 
+    endingName: 
+    choices:
+    - text: run away
+      nextNodeId: ending_1
+      healthChange: 0
+      damageChange: 0
+      courageChange: 0
+      grantedItemId: 
+      flagToSet: 
+    - text: go attac
+      nextNodeId: combat_1
+      healthChange: 0
+      damageChange: 0
+      courageChange: 0
+      grantedItemId: 
+      flagToSet: 
+  - id: ending_2
+    title: yipee
+    body: u defeated juan
+    type: 3
     enemyId: 
+    victoryNodeId: 
+    defeatNodeId: 
+    endingId: 
+    endingName: 
     choices:
     - text: run away
       nextNodeId: ending_1
