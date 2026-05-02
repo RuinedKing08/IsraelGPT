@@ -6,6 +6,7 @@ using UnityEngine.Events;
 using UnityEngine.InputSystem.UI;
 using UnityEngine.UI;
 #if UNITY_EDITOR
+using UnityEditor;
 using UnityEditor.SceneManagement;
 #endif
 
@@ -61,21 +62,19 @@ public class CombatPanelUI : MonoBehaviour
     [SerializeField] Button itemButtonTemplate;
     [SerializeField] Button itemBackButton;
     [SerializeField] TMP_FontAsset fontAsset;
+    [SerializeField] bool showDebugPanelInPlayMode;
 
     readonly List<Button> spawnedActionButtons = new List<Button>();
     readonly List<Button> spawnedItemButtons = new List<Button>();
 
     void Reset()
     {
-        EnsureEditorHierarchy();
+        QueueEditorRebuild();
     }
 
     void OnValidate()
     {
-        if (!Application.isPlaying)
-        {
-            EnsureEditorHierarchy();
-        }
+        QueueEditorRebuild();
     }
 
     void Awake()
@@ -257,6 +256,23 @@ public class CombatPanelUI : MonoBehaviour
         debugStatusText.text = string.IsNullOrWhiteSpace(status) ? "Sin estado." : status;
     }
 
+    public void SetDebugPanelVisible(bool visible)
+    {
+        EnsureBuilt();
+
+        if (debugPanel == null)
+        {
+            return;
+        }
+
+        if (Application.isPlaying)
+        {
+            showDebugPanelInPlayMode = visible;
+        }
+
+        debugPanel.gameObject.SetActive(visible || !Application.isPlaying);
+    }
+
     void EnsureEditorHierarchy()
     {
         if (!gameObject.scene.IsValid())
@@ -267,8 +283,38 @@ public class CombatPanelUI : MonoBehaviour
         EnsureBuilt();
     }
 
+#if UNITY_EDITOR
+    void QueueEditorRebuild()
+    {
+        if (Application.isPlaying || EditorApplication.isPlayingOrWillChangePlaymode || !gameObject.scene.IsValid())
+        {
+            return;
+        }
+
+        EditorApplication.delayCall -= HandleEditorRebuild;
+        EditorApplication.delayCall += HandleEditorRebuild;
+    }
+
+    void HandleEditorRebuild()
+    {
+        EditorApplication.delayCall -= HandleEditorRebuild;
+
+        if (this == null || Application.isPlaying || EditorApplication.isPlayingOrWillChangePlaymode || !gameObject.scene.IsValid())
+        {
+            return;
+        }
+
+        EnsureBuilt();
+    }
+#endif
+
     void PrepareEditorView()
     {
+        if (debugPanel != null)
+        {
+            debugPanel.gameObject.SetActive(true);
+        }
+
         if (encounterPanel != null)
         {
             encounterPanel.gameObject.SetActive(true);
@@ -292,6 +338,11 @@ public class CombatPanelUI : MonoBehaviour
 
     void PreparePlayModeView()
     {
+        if (debugPanel != null)
+        {
+            debugPanel.gameObject.SetActive(showDebugPanelInPlayMode);
+        }
+
         if (actionButtonTemplate != null)
         {
             actionButtonTemplate.gameObject.SetActive(false);

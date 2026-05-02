@@ -2101,7 +2101,7 @@ GameObject:
   - component: {fileID: 815510003}
   - component: {fileID: 815510004}
   m_Layer: 0
-  m_Name: Combat Debug
+  m_Name: Adventure Systems
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

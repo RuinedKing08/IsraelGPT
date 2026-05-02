@@ -1,0 +1,204 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9efa0b24d69cb3f4abef39551a038cf3, type: 3}
+  m_Name: MainStoryGraph
+  m_EditorClassIdentifier: Assembly-CSharp::RuntimeStoryGraph
+  startNodeId: start
+  nodes:
+  - id: start
+    titleKey: SCENE_1_TITLE
+    title: El umbral
+    bodyKey: SCENE_1_BODY
+    body: La puerta de hierro de la mazmorra respira un aire frio. A un lado, un brasero roto esconde un brillo tenue. Al otro, un viejo cuidador te observa en silencio, como si esperara tu primera decision.
+    type: 0
+    enemyId: 
+    victoryNodeId: 
+    defeatNodeId: 
+    endingId: 
+    endingName: 
+    choices:
+    - textKey: SCENE_1_CHOICE_A
+      text: Examinar el brasero roto
+      nextNodeId: courtyard
+      healthChange: 0
+      damageChange: 0
+      courageChange: 0
+      grantedItemId: small_potion
+      flagToSet: intro_brazier
+    - textKey: SCENE_1_CHOICE_B
+      text: Hablar con el cuidador
+      nextNodeId: caretaker
+      healthChange: 0
+      damageChange: 0
+      courageChange: 1
+      grantedItemId: 
+      flagToSet: intro_caretaker
+  - id: courtyard
+    titleKey: SCENE_2_TITLE
+    title: Patio quebrado
+    bodyKey: SCENE_2_BODY
+    body: Cruzas el patio interior con la pequena pocion guardada bajo el brazo. A tu izquierda yace un archivo derrumbado; al frente, un porton espinoso late con energia oscura.
+    type: 0
+    enemyId: 
+    victoryNodeId: 
+    defeatNodeId: 
+    endingId: 
+    endingName: 
+    choices:
+    - textKey: SCENE_2_CHOICE_A
+      text: Entrar primero al archivo
+      nextNodeId: archive
+      healthChange: 0
+      damageChange: 0
+      courageChange: 0
+      grantedItemId: 
+      flagToSet: archive_path
+    - textKey: SCENE_2_CHOICE_B
+      text: Forzar el porton espinoso
+      nextNodeId: guardian_gate
+      healthChange: -2
+      damageChange: 0
+      courageChange: 0
+      grantedItemId: 
+      flagToSet: direct_gate
+  - id: caretaker
+    titleKey: SCENE_3_TITLE
+    title: La advertencia
+    bodyKey: SCENE_3_BODY
+    body: El cuidador te ofrece un mapa incompleto y te advierte que el guardian de la camara responde al miedo. Sus palabras no curan, pero afilan la voluntad.
+    type: 0
+    enemyId: 
+    victoryNodeId: 
+    defeatNodeId: 
+    endingId: 
+    endingName: 
+    choices:
+    - textKey: SCENE_3_CHOICE_A
+      text: Aceptar el mapa y rodear por el archivo
+      nextNodeId: archive
+      healthChange: 0
+      damageChange: 0
+      courageChange: 1
+      grantedItemId: big_potion
+      flagToSet: archive_with_map
+    - textKey: SCENE_3_CHOICE_B
+      text: Ignorar la advertencia y avanzar
+      nextNodeId: guardian_gate
+      healthChange: 0
+      damageChange: 0
+      courageChange: -1
+      grantedItemId: 
+      flagToSet: reckless_gate
+  - id: archive
+    titleKey: SCENE_4_TITLE
+    title: Archivo derrumbado
+    bodyKey: SCENE_4_BODY
+    body: Entre libros humedos y runas rotas encuentras notas sobre el guardian. Aprendes donde golpear y tambien descubres una salida discreta hacia la superficie.
+    type: 0
+    enemyId: 
+    victoryNodeId: 
+    defeatNodeId: 
+    endingId: 
+    endingName: 
+    choices:
+    - textKey: SCENE_4_CHOICE_A
+      text: Tomar las runas y enfrentar al guardian
+      nextNodeId: guardian_gate
+      healthChange: 0
+      damageChange: 2
+      courageChange: 0
+      grantedItemId: big_potion
+      flagToSet: rune_blade
+    - textKey: SCENE_4_CHOICE_B
+      text: Escapar con el conocimiento y dejar la reliquia atras
+      nextNodeId: ending_neutral
+      healthChange: 0
+      damageChange: 0
+      courageChange: 0
+      grantedItemId: 
+      flagToSet: archive_escape
+  - id: guardian_gate
+    titleKey: SCENE_5_TITLE
+    title: El guardian
+    bodyKey: SCENE_5_BODY
+    body: Al abrirse la camara central, un lobo de sombra emerge de la neblina y se lanza sobre ti. No hay mas palabras. Solo combate.
+    type: 2
+    enemyId: DebugWolf
+    victoryNodeId: relic_chamber
+    defeatNodeId: ending_bad
+    endingId: 
+    endingName: 
+    choices: []
+  - id: relic_chamber
+    titleKey: SCENE_6_TITLE
+    title: La reliquia
+    bodyKey: SCENE_6_BODY
+    body: El guardian cae y la camara queda en silencio. Sobre el altar, la reliquia late con una luz enfermiza. Puedes romper la maldicion o reclamar su poder.
+    type: 0
+    enemyId: 
+    victoryNodeId: 
+    defeatNodeId: 
+    endingId: 
+    endingName: 
+    choices:
+    - textKey: SCENE_6_CHOICE_A
+      text: Destruir la reliquia y sellar la sala
+      nextNodeId: ending_good
+      healthChange: 0
+      damageChange: 0
+      courageChange: 1
+      grantedItemId: 
+      flagToSet: relic_destroyed
+    - textKey: SCENE_6_CHOICE_B
+      text: Guardar la reliquia y marcharte
+      nextNodeId: ending_neutral
+      healthChange: 0
+      damageChange: 1
+      courageChange: 0
+      grantedItemId: 
+      flagToSet: relic_taken
+  - id: ending_good
+    titleKey: ENDING_GOOD_TITLE
+    title: Final bueno
+    bodyKey: ENDING_GOOD_BODY
+    body: Con un ultimo golpe, rompes la reliquia y la maldicion se disipa. Sales herido, pero la mazmorra ya no reclamara a nadie mas.
+    type: 3
+    enemyId: 
+    victoryNodeId: 
+    defeatNodeId: 
+    endingId: good
+    endingName: Final bueno
+    choices: []
+  - id: ending_neutral
+    titleKey: ENDING_NEUTRAL_TITLE
+    title: Final neutral
+    bodyKey: ENDING_NEUTRAL_BODY
+    body: Abandonas la mazmorra con conocimiento o poder, pero no con paz. Tu nombre sera recordado, aunque nadie sabra si hiciste lo correcto.
+    type: 3
+    enemyId: 
+    victoryNodeId: 
+    defeatNodeId: 
+    endingId: neutral
+    endingName: Final neutral
+    choices: []
+  - id: ending_bad
+    titleKey: ENDING_BAD_TITLE
+    title: Final malo
+    bodyKey: ENDING_BAD_BODY
+    body: El guardian te derriba frente al altar. La reliquia sigue latiendo en la oscuridad, esperando al siguiente aventurero que crea estar listo.
+    type: 3
+    enemyId: 
+    victoryNodeId: 
+    defeatNodeId: 
+    endingId: bad
+    endingName: Final malo
+    choices: []
