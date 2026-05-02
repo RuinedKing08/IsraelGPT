@@ -17,7 +17,16 @@ MonoBehaviour:
   m_SharedData: {fileID: 11400000, guid: e741f29ce976e94498da6295fc1979fa, type: 2}
   m_Metadata:
     m_Items: []
-  m_TableData: []
+  m_TableData:
+  - m_Id: 25820676096
+    m_Localized: Bienvenidos a la mazmorra de TLS.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31776587776
+    m_Localized: "Est\xE1s a punto de entrar en el aterrador mundo de la Mazmorra
+      de TLS. \xC1rmate de valor y ten \xE1nimo."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

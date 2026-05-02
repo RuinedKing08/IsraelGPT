@@ -16,43 +16,135 @@ MonoBehaviour:
   m_TableCollectionNameGuidString: e741f29ce976e94498da6295fc1979fa
   m_Entries:
   - m_Id: 25820676096
-    m_Key: 1
+    m_Key: INTRO
     m_Metadata:
       m_Items: []
   - m_Id: 29226450944
-    m_Key: New Entry 1
+    m_Key: INTRO_NAME
     m_Metadata:
       m_Items: []
   - m_Id: 31776587776
-    m_Key: New Entry 2
+    m_Key: INTRO_END
     m_Metadata:
       m_Items: []
   - m_Id: 33521418240
-    m_Key: New Entry 3
+    m_Key: SCENE_1_INTRO
     m_Metadata:
       m_Items: []
   - m_Id: 85434318848
-    m_Key: New Entry 4
+    m_Key: SCENE_1_CHOICE_A
     m_Metadata:
       m_Items: []
   - m_Id: 90027081728
-    m_Key: New Entry 5
+    m_Key: SCENE_1_CHOICE_B
     m_Metadata:
       m_Items: []
   - m_Id: 91604140032
-    m_Key: New Entry 6
+    m_Key: SCENE_2_INTRO
     m_Metadata:
       m_Items: []
   - m_Id: 92577218560
-    m_Key: New Entry 7
+    m_Key: SCENE_2_CHOICE_A
     m_Metadata:
       m_Items: []
   - m_Id: 93181198336
-    m_Key: New Entry 8
+    m_Key: SCENE_2_CHOICE_B
     m_Metadata:
       m_Items: []
   - m_Id: 94221385728
-    m_Key: New Entry 9
+    m_Key: SCENE_3_INTRO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5087498354688
+    m_Key: SCENE_3_CHOICE_A
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5090446950400
+    m_Key: SCENE_3_CHOICE_B
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5128095023104
+    m_Key: SCENE_4_INTRO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5161141944320
+    m_Key: SCENE_4_CHOICE_A
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5162823860224
+    m_Key: SCENE_4_CHOICE_B
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5218356445184
+    m_Key: SCENE_5_INTRO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5218889121792
+    m_Key: SCENE_5_CHOICE_A
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5223389609984
+    m_Key: SCENE_5_CHOICE_B
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5284391567360
+    m_Key: SCENE_6_INTRO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5288887861248
+    m_Key: SCENE_6_CHOICE_A
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5289957408768
+    m_Key: SCENE_6_CHOICE_B
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5385155526656
+    m_Key: SCENE_7_INTRO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5387202347008
+    m_Key: SCENE_7_CHOICE_A
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5389043646464
+    m_Key: SCENE_7_CHOICE_B
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5462733373440
+    m_Key: SCENE_8_INTRO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5464406900736
+    m_Key: SCENE_8_CHOICE_A
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5465585500160
+    m_Key: SCENE_8_CHOICE_B
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5542559367168
+    m_Key: SCENE_9_INTRO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5543163346944
+    m_Key: SCENE_9_CHOICE_A
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5544539078656
+    m_Key: SCENE_9_CHOICE_B
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5595776696320
+    m_Key: SCENE_10_INTRO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5597383114752
+    m_Key: SCENE_10_CHOICE_A
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5602118483968
+    m_Key: SCENE_10_CHOICE_B
     m_Metadata:
       m_Items: []
   m_Metadata:
