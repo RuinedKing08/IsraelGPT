@@ -49,7 +49,7 @@ public class GayManager : MonoBehaviour
             return;
         }
 
-        LoadNode(storyGraph.startNodeId);
+        LoadStartNode();
     }
 
     private void OnDestroy()
@@ -58,6 +58,18 @@ public class GayManager : MonoBehaviour
         {
             combatController.OnEncounterFinished -= HandleCombatFinished;
         }
+    }
+
+    private void LoadStartNode()
+    {
+        RuntimeStoryNode startNode = storyGraph.GetStartNode();
+        if (startNode == null)
+        {
+            Debug.LogError("Runtime story graph has no valid nodes.");
+            return;
+        }
+
+        LoadNode(startNode.id);
     }
 
     private void LoadNode(string nodeId)
@@ -82,6 +94,7 @@ public class GayManager : MonoBehaviour
                 break;
             case NodeType.Ending:
                 HideChoiceButtons();
+                ShowEnding(currentNode);
                 break;
             default:
                 SetupChoiceButton(choiceButton1, choiceText1, 0);
@@ -197,6 +210,13 @@ public class GayManager : MonoBehaviour
 
     private void ContinueFromCombat(bool victory)
     {
+        string routeNodeId = victory ? currentNode.victoryNodeId : currentNode.defeatNodeId;
+        if (!string.IsNullOrWhiteSpace(routeNodeId))
+        {
+            LoadNode(routeNodeId);
+            return;
+        }
+
         int choiceIndex = victory ? 0 : 1;
 
         if (currentNode == null || choiceIndex >= currentNode.choices.Count)
@@ -207,6 +227,12 @@ public class GayManager : MonoBehaviour
 
         RuntimeStoryChoice route = currentNode.choices[choiceIndex];
         LoadNode(route.nextNodeId);
+    }
+
+    private void ShowEnding(RuntimeStoryNode node)
+    {
+        string endingLabel = string.IsNullOrWhiteSpace(node.endingName) ? node.title : node.endingName;
+        Debug.Log($"Ending reached: {endingLabel} ({node.endingId})");
     }
 
     private EnemyDefinition ResolveEnemy(string enemyId)
