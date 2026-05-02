@@ -1,0 +1,421 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: DialogueTable_en-US
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.StringTable
+  m_LocaleId:
+    m_Code: en-US
+  m_SharedData: {fileID: 11400000, guid: 33b257a7da008d64b8a775f3248cafab, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 31636578304
+    m_Localized: == Welcome to the TLS Dungeon ==
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36724269056
+    m_Localized: Brave adventurer, what is thy name?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1105764278272
+    m_Localized: What is thy health?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1168343293952
+    m_Localized: 'What is thy attack power? '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1269203722240
+    m_Localized: You are about to enter the terrifying world of the TLS Dungeon.
+      Steel thyself and take heart.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1334706167808
+    m_Localized: 'You find yourself at the entrance to a building long forgotten
+      by time.
+
+      In their language, the ancients called it ''Toulouse''.
+
+      Taking
+      a better look, you realize there are actually two entrances.
+
+      One is
+      in front of you, leading to a larger building. Another, down the road, to a
+      smaller one.
+
+      Which entrance will you go through?'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1630526234624
+    m_Localized: Enter the larger building.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1685270290432
+    m_Localized: Enter the smaller building.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4195246661632
+    m_Localized: 'You enter a small garden. Whatever plants were kept here before
+      have been replaced by the reclamation of nature.
+
+      From here, the path
+      splits into two roads.
+
+      To your left, a spiral staircase made of steel
+      that leads to the roof.
+
+      To your right, an entrance that leads into a
+      hallway.
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4342588366848
+    m_Localized: Go to the staircase
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4389954641920
+    m_Localized: Go to the hallway
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4436855349248
+    m_Localized: 'You decide to try your luck with the smaller building down the
+      road.
+
+      It immediately opens up into a small courtyard. Some of the ancients''
+      old mechanical chariots lay here, destroyed.
+
+      You see something glowing
+      inside one of them, and reach your hand through the broken glass...'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4738639716352
+    m_Localized: You found a potion!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4758466191360
+    m_Localized: 'To proceed, you must pass through a wide hall with a low ceiling.
+      But be careful, the stone here is crumbling, and the columns are weak.
+
+      It
+      looks like it could fall down at any second. If you''re not careful, the ceiling
+      could collapse on top of you.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4822467076096
+    m_Localized: Sprint through the hall as fast as you can.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4855472054272
+    m_Localized: Get on all fours and crawl... slowly.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4908228009984
+    m_Localized: 'You take the staircase and begin to climb the side of the building.
+
+      Suddenly,
+      a loud slithering approaches you from above. The sound of hissing and growling
+      grows closer, until...
+
+      Slithering downward from the ceiling, a giant
+      serpent blocks your path! Its fangs drip with venom, and it looks at you with
+      hunger...
+
+      You draw your sword and your shield. Prepare to fight!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5071214469120
+    m_Localized: 'The serpent falls with a mighty thud that rattles the rusting,
+      decayed iron of the staircase.
+
+      Its limp corpse falls off the side of
+      the platform, unblocking your path.
+
+      At the top of the stairs, you find
+      yourself at another impasse. A round hallway, overlooking a circular view of
+      the bottom of the building.
+
+      Most of the doors here are rusted shut or
+      lead to caved in rooms. However, there are two doors you CAN go into.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5181860208640
+    m_Localized: Go into the door closest to the top of the stairs.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5221139865600
+    m_Localized: Go into the door at the back of the circular hallway.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5416653152256
+    m_Localized: 'You step into the hallway.
+
+      The rooms are made of marble
+      and glass. Architecture typical of the ancients.
+
+      As you pass by the
+      hall, you notice something gleaming behind a desk at the front...'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5531702910976
+    m_Localized: You found a potion!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5555765633024
+    m_Localized: 'Proceeding further, you come into a large courtyard full of discarded
+      tables and chairs.
+
+      To your right, there''s a different spiral staircase,
+      similar to the one at the entrance. You''re not sure where it leads.
+
+      The
+      left path proceeds into a small set of steps that leads to an even larger courtyard.
+      An art mural stands there.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5646740086784
+    m_Localized: Climb the staircase
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5684799201280
+    m_Localized: Go to the larger courtyard
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5727312666624
+    m_Localized: 'Big mistake.
+
+
+      You don''t want to spend any longer under
+      the crumbling ceiling than you have to, so you gear up and sprint through the
+      hall.
+
+      However, in your recklesness, you trip and bump into one of the
+      pillar. Horror overwhelms you as you hear a loud ''crack''!
+
+      It all happens
+      so fast. The sight of collapsing stone is the last thing you ever see.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5890886328320
+    m_Localized: 'Crawling seems to have saved your life. As soon as you''re out
+      of the hall, a stray breeze passes by and tumbles one of the columns.
+
+      You
+      wince and recoil at the loud sounds of several tons of stone crumbling down.
+
+      However,
+      the more alarming thing is not that sound, but the groaning and snoring you
+      hear behind you.
+
+      You thought it was a wall from the other side of the
+      hall, but now that you''re in the courtyard you can see it better...
+
+      There''s
+      a giant here. It was fast asleep lying on its side, but the sound of the collapsing
+      hallway has alerted it!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5965096148992
+    m_Localized: Hide!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6104103772160
+    m_Localized: Face it head on.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6140858458112
+    m_Localized: You step into a small room tiled with marble and concrete. There's
+      some sinks to the left and stalls to the right.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6193983512576
+    m_Localized: Look for treasure in the sink.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6228431331328
+    m_Localized: Look for treasure in the stalls.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6263751565312
+    m_Localized: 'You step into a wide room full of easels and wooden stools.
+
+      There''s
+      quite a bit of rubble you could look under... or you could search the room
+      more thoroughly.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6322618621952
+    m_Localized: Look under the rubble.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6374086926336
+    m_Localized: Search more thoroughly.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6397386285056
+    m_Localized: The staircase leads you to a room at the top of the building. It's
+      full of strange machines.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6456622440448
+    m_Localized: Take one of the strange, thin metal rectangles.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6497886003200
+    m_Localized: Take one of the large metal boxes with glass parts.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6537425707008
+    m_Localized: 'You take the steps into the larger courtyard.
+
+      Suddenly,
+      the sound of flapping wings alerts you. A large shadow obscures the view.
+
+      It''s
+      a young dragon! It''s flown in from above, and it sees you as its next prey.
+
+      You
+      draw your sword and your shield. Prepare to fight!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6646251118592
+    m_Localized: 'With a loud, ear-piercing screech, the Dragon goes limp and falls
+      from the sky.
+
+      Its huge body lands on the ground with a thunderous THUD.
+
+      You''ve
+      slain the beast. All that remains is to scour the area for treasure.
+
+      There''s
+      the mural behind you, but there''s also something that looks like a booth up
+      front.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6748755714048
+    m_Localized: Scavenge the mural
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6781504839680
+    m_Localized: Search the booth.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6805710168064
+    m_Localized: 'You quickly duck into one of the rooms that the courtyard opens
+      up into.
+
+      You duck and make yourself small, waiting out the giant''s
+      attention.
+
+      Luck is on your side. It eventually gets bored and walks
+      away with thunderous footsteps.
+
+      In the meantime, you now find yourself
+      in a room full of ancient technology!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6945296605184
+    m_Localized: Grab one of the small rectangular boxes.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6946965938176
+    m_Localized: Grab one of the large rectangular boxes.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7017077923840
+    m_Localized: 'The giant awakens fully, and looks at you with anger.
+
+      ''You
+      wake Ugg!'' It roars, anger dripping from its voice. ''You die!''
+
+      You
+      draw your sword and your shield. Prepare to fight!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7189723865088
+    m_Localized: 'The giant falls with a mighty thud that rattles the very ground.
+
+      It
+      lets out one last groan before all life leaves its body.
+
+      As this happens,
+      the treasures it was holding tightly in its fist come loose and fall to the
+      ground.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7270510354432
+    m_Localized: Grab the gold crown and leave.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7295986556928
+    m_Localized: Grab the silken cape and leave.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7339250802688
+    m_Localized: You stick your hand into the sink and pull out... a golden ring!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7434465697792
+    m_Localized: You walk into one of the stalls and find... a backpack full of art
+      supplies!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7469647519744
+    m_Localized: You rummage through the debris and uncover... a full human skeleton
+      made of some kind of plastic! You decide to take it with you.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7521203904512
+    m_Localized: You look harder, and eventually finally get the idea to look up.
+      There's a strange contraption hanging from the ceiling! You jump and grab it.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7551386116096
+    m_Localized: You strip the materials off of the mural, collecting the various
+      priceless paints and materials that still remain...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7598341349376
+    m_Localized: You hurry into the booth, wary of another dragon attack, and find
+      a treasure trove of tools and objects left behind by the ancients!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7673511665664
+    m_Localized: You grab one of the smaller pieces of ancient technology. You think
+      they used to call it a 'phone'.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7717178564608
+    m_Localized: You grab one of the larger pieces of ancient technology. A 'monitor',
+      you believe it's called.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7762464464896
+    m_Localized: 'As the life leaves your body, you can''t help but wonder why you
+      thought this was a good idea.
+
+
+
+      Game Over'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7847470424064
+    m_Localized: 'You leave the dungeon the same way you came in.
+
+      You bring
+      the treasure you found with you. The merchants of your hometown will surely
+      pay a fortune for this!'
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

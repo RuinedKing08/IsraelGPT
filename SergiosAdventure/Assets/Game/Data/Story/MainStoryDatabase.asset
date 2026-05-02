@@ -1,0 +1,182 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e434d0c4047040149af87ceda4b2a67d, type: 3}
+  m_Name: MainStoryDatabase
+  m_EditorClassIdentifier: Assembly-CSharp::SergiosAdventure.Game.Story.StoryDatabase
+  nodes:
+  - id: intro_gate
+    title: Las ruinas del velo
+    body: La puerta de piedra respira humedad y ceniza. Una campana rota cuelga del
+      arco, como si alguien hubiera querido avisar que entrar aqui tiene un precio.
+    nodeType: 0
+    choices:
+    - label: Revisar el brasero apagado junto al porton
+      nextNodeId: brazier_cache
+      healthDelta: 0
+      damageDelta: 0
+      grantedItem: {fileID: 0}
+    - label: Seguir la voz del cuidador entre las sombras
+      nextNodeId: caretaker_warning
+      healthDelta: 0
+      damageDelta: 0
+      grantedItem: {fileID: 0}
+    enemy: {fileID: 0}
+    victoryNodeId: 
+    defeatNodeId: 
+    endingType: 0
+  - id: brazier_cache
+    title: Bajo la ceniza
+    body: Bajo el brasero encuentras una bolsa de cuero seca. Dentro queda una pomada
+      tibia y un mapa a medio quemar que apunta hacia el archivo.
+    nodeType: 0
+    choices:
+    - label: Guardar la pomada y seguir al archivo
+      nextNodeId: archive
+      healthDelta: 0
+      damageDelta: 0
+      grantedItem: {fileID: 11400000, guid: 2558e1774db73434b952a25787a2d7d8, type: 2}
+    - label: Dejar la bolsa intacta y avanzar con cuidado
+      nextNodeId: archive
+      healthDelta: 0
+      damageDelta: 0
+      grantedItem: {fileID: 0}
+    enemy: {fileID: 0}
+    victoryNodeId: 
+    defeatNodeId: 
+    endingType: 0
+  - id: caretaker_warning
+    title: El cuidador sin rostro
+    body: Una figura envuelta en velos murmura que la reliquia escucha el miedo.
+      Si respetas el recorrido, llegaras entero; si te apuras, el santuario cobrara
+      su deuda.
+    nodeType: 0
+    choices:
+    - label: Escuchar la advertencia y tomar aire
+      nextNodeId: archive
+      healthDelta: 2
+      damageDelta: 0
+      grantedItem: {fileID: 0}
+    - label: Ignorarlo y correr hacia el pasillo espinoso
+      nextNodeId: thorn_corridor
+      healthDelta: -3
+      damageDelta: 0
+      grantedItem: {fileID: 0}
+    enemy: {fileID: 0}
+    victoryNodeId: 
+    defeatNodeId: 
+    endingType: 0
+  - id: archive
+    title: El archivo hundido
+    body: Decenas de tablillas narran como cayeron los antiguos guardianes. Entre
+      polvo y cera, una nota describe el punto debil de la criatura que custodia
+      la camara final.
+    nodeType: 0
+    choices:
+    - label: Leer las notas y preparar el golpe
+      nextNodeId: thorn_corridor
+      healthDelta: 0
+      damageDelta: 2
+      grantedItem: {fileID: 0}
+    - label: Atajar entre estantes derruidos
+      nextNodeId: thorn_corridor
+      healthDelta: -2
+      damageDelta: 0
+      grantedItem: {fileID: 0}
+    enemy: {fileID: 0}
+    victoryNodeId: 
+    defeatNodeId: 
+    endingType: 0
+  - id: thorn_corridor
+    title: Corredor de espinas
+    body: El ultimo pasaje esta cubierto de lianas negras que se cierran al escuchar
+      pasos. Al fondo, una luz roja late al ritmo de un corazon ajeno.
+    nodeType: 0
+    choices:
+    - label: Cruzar el corredor con paciencia
+      nextNodeId: guardian_combat
+      healthDelta: 0
+      damageDelta: 0
+      grantedItem: {fileID: 0}
+    - label: Forzar el paso antes de que cierre
+      nextNodeId: guardian_combat
+      healthDelta: -2
+      damageDelta: 0
+      grantedItem: {fileID: 0}
+    enemy: {fileID: 0}
+    victoryNodeId: 
+    defeatNodeId: 
+    endingType: 0
+  - id: guardian_combat
+    title: La camara del guardian
+    body: La reliquia descansa sobre un altar de obsidiana. Frente a ella despierta
+      el Guardian del Velo, cubierto de placas y espinas.
+    nodeType: 1
+    choices: []
+    enemy: {fileID: 11400000, guid: ba96581f782a2194a8d125a9bdf7023b, type: 2}
+    victoryNodeId: relic_choice
+    defeatNodeId: ending_bad
+    endingType: 0
+  - id: relic_choice
+    title: El altar abierto
+    body: La criatura cae y el santuario queda en silencio. La reliquia late en tu
+      palma como si esperara una ultima orden.
+    nodeType: 0
+    choices:
+    - label: Destruir la reliquia y romper el ciclo
+      nextNodeId: ending_good
+      healthDelta: 0
+      damageDelta: 0
+      grantedItem: {fileID: 0}
+    - label: Salir con la reliquia envuelta en tela
+      nextNodeId: ending_neutral
+      healthDelta: 0
+      damageDelta: 0
+      grantedItem: {fileID: 0}
+    - label: Dejarla quieta y marcharte con el conocimiento
+      nextNodeId: ending_neutral
+      healthDelta: 0
+      damageDelta: 0
+      grantedItem: {fileID: 0}
+    enemy: {fileID: 0}
+    victoryNodeId: 
+    defeatNodeId: 
+    endingType: 0
+  - id: ending_good
+    title: Ceniza liberada
+    body: Golpeas la reliquia contra el altar y la luz roja se disuelve en una lluvia
+      de polvo. Las ruinas por fin exhalan un silencio limpio.
+    nodeType: 2
+    choices: []
+    enemy: {fileID: 0}
+    victoryNodeId: 
+    defeatNodeId: 
+    endingType: 1
+  - id: ending_neutral
+    title: Una deuda incompleta
+    body: Abandonas las ruinas con un pacto a medias. Tal vez te llevas la reliquia,
+      tal vez solo sus secretos, pero el santuario seguira pesando sobre tu memoria.
+    nodeType: 2
+    choices: []
+    enemy: {fileID: 0}
+    victoryNodeId: 
+    defeatNodeId: 
+    endingType: 2
+  - id: ending_bad
+    title: Bajo el velo
+    body: El guardian te derriba antes de que puedas alcanzar el altar. La camara
+      vuelve a cerrarse y tu nombre queda atrapado entre espinas y piedra.
+    nodeType: 2
+    choices: []
+    enemy: {fileID: 0}
+    victoryNodeId: 
+    defeatNodeId: 
+    endingType: 3

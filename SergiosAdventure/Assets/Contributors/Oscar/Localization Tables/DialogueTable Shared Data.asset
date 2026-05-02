@@ -1,0 +1,264 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: DialogueTable Shared Data
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.SharedTableData
+  m_TableCollectionName: DialogueTable
+  m_TableCollectionNameGuidString: 33b257a7da008d64b8a775f3248cafab
+  m_Entries:
+  - m_Id: 31636578304
+    m_Key: INTRO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36724269056
+    m_Key: INTRO_NAME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1105764278272
+    m_Key: INTRO_HEALTH
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1168343293952
+    m_Key: INTRO_ATTACK
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1269203722240
+    m_Key: INTRO_END
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1334706167808
+    m_Key: SCENE_1_INTRO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1630526234624
+    m_Key: SCENE_1_CHOICE_A
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1685270290432
+    m_Key: SCENE_1_CHOICE_B
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4195246661632
+    m_Key: SCENE_2A_INTRO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4342588366848
+    m_Key: SCENE_2A_CHOICE_A
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4389954641920
+    m_Key: SCENE_2A_CHOICE_B
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4436855349248
+    m_Key: SCENE_2B_INTRO_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4738639716352
+    m_Key: SCENE_2B_INTRO_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4758466191360
+    m_Key: SCENE_2B_INTRO_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4822467076096
+    m_Key: SCENE_2B_CHOICE_A
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4855472054272
+    m_Key: SCENE_2B_CHOICE_B
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4908228009984
+    m_Key: SCENE_3A_INTRO_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5071214469120
+    m_Key: SCENE_3A_INTRO_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5181860208640
+    m_Key: SCENE_3A_CHOICE_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5221139865600
+    m_Key: SCENE_3A_CHOICE_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5416653152256
+    m_Key: SCENE_3B_INTRO_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5531702910976
+    m_Key: SCENE_3B_INTRO_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5555765633024
+    m_Key: SCENE_3B_INTRO_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5646740086784
+    m_Key: SCENE_3B_CHOICE_A
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5684799201280
+    m_Key: SCENE_3B_CHOICE_B
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5727312666624
+    m_Key: SCENE_3C
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5890886328320
+    m_Key: SCENE_3D_INTRO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5965096148992
+    m_Key: SCENE_3D_CHOICE_A
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6104103772160
+    m_Key: SCENE_3D_CHOICE_B
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6140858458112
+    m_Key: SCENE_4A_INTRO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6193983512576
+    m_Key: SCENE_4A_CHOICE_A
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6228431331328
+    m_Key: SCENE_4A_CHOICE_B
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6263751565312
+    m_Key: SCENE_4B_INTRO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6322618621952
+    m_Key: SCENE_4B_CHOICE_A
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6374086926336
+    m_Key: SCENE_4B_CHOICE_B
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6397386285056
+    m_Key: SCENE_4C_INTRO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6456622440448
+    m_Key: SCENE_4C_CHOICE_A
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6497886003200
+    m_Key: SCENE_4C_CHOICE_B
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6537425707008
+    m_Key: SCENE_4D_INTRO_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6646251118592
+    m_Key: SCENE_4D_INTRO_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6748755714048
+    m_Key: SCENE_4D_CHOICE_A
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6781504839680
+    m_Key: SCENE_4D_CHOICE_B
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6805710168064
+    m_Key: SCENE_4E_INTRO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6945296605184
+    m_Key: SCENE_4E_CHOICE_A
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6946965938176
+    m_Key: SCENE_4E_CHOICE_B
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7017077923840
+    m_Key: SCENE_4F_INTRO_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7189723865088
+    m_Key: SCENE_4F_INTRO_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7270510354432
+    m_Key: SCENE_4F_CHOICE_A
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7295986556928
+    m_Key: SCENE_4F_CHOICE_B
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7339250802688
+    m_Key: SCENE_5A
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7434465697792
+    m_Key: SCENE_5B
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7469647519744
+    m_Key: SCENE_5C
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7521203904512
+    m_Key: SCENE_5D
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7551386116096
+    m_Key: SCENE_5G
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7598341349376
+    m_Key: SCENE_5H
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7673511665664
+    m_Key: SCENE_5I
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7717178564608
+    m_Key: SCENE_5J
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7762464464896
+    m_Key: GAME_OVER
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7847470424064
+    m_Key: ENDING
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 5155274716069495027
+  references:
+    version: 2
+    RefIds:
+    - rid: 5155274716069495027
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1777677384937

@@ -1,0 +1,215 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: StringTable_en
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.StringTable
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: e741f29ce976e94498da6295fc1979fa, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 1001
+    m_Localized: TLS Dungeon
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1002
+    m_Localized: A branching text adventure where every decision leaves a mark on the dungeon.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1003
+    m_Localized: Start Adventure
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1004
+    m_Localized: Quit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1005
+    m_Localized: Language
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1006
+    m_Localized: ES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007
+    m_Localized: EN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1008
+    m_Localized: By Sergio, Mateo, Juan, Milton and Oscar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1009
+    m_Localized: Enter your name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1010
+    m_Localized: The dungeon will remember every decision. Write the name that will face this journey.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1011
+    m_Localized: Press Enter to continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1012
+    m_Localized: Adventurer name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1013
+    m_Localized: 'Adventurer: {0}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1014
+    m_Localized: 'Health: {0}/{1}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1015
+    m_Localized: 'Damage: {0}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1016
+    m_Localized: 'Bravery: {0}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1017
+    m_Localized: Inventory
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1018
+    m_Localized: 'Inventory: empty'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1019
+    m_Localized: Restart
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1020
+    m_Localized: Main Menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1021
+    m_Localized: The Threshold
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1022
+    m_Localized: The iron door of the dungeon exhales cold air. Beside it, a broken brazier hides a faint glow. To the other side, an old caretaker watches you in silence, as if waiting for your first move.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1023
+    m_Localized: Search the broken brazier
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1024
+    m_Localized: Speak with the caretaker
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1025
+    m_Localized: Shattered Courtyard
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1026
+    m_Localized: You cross the inner courtyard with a small potion tucked away. To your left lies a collapsed archive. Straight ahead, a thorned gate pulses with dark energy.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1027
+    m_Localized: Enter the archive first
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1028
+    m_Localized: Force open the thorned gate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1029
+    m_Localized: The Warning
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1030
+    m_Localized: The caretaker offers you an unfinished map and warns that the guardian of the chamber answers to fear. His words do not heal, but they sharpen your will.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1031
+    m_Localized: Accept the map and circle through the archive
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1032
+    m_Localized: Ignore the warning and march on
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1033
+    m_Localized: Fallen Archive
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1034
+    m_Localized: Among wet books and shattered runes you find notes about the guardian. You learn where to strike, and you also discover a hidden path back to the surface.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1035
+    m_Localized: Take the runes and face the guardian
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1036
+    m_Localized: Escape with the knowledge and leave the relic behind
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1037
+    m_Localized: The Guardian
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1038
+    m_Localized: As the central chamber opens, a shadow wolf rises from the mist and lunges at you. There are no more words. Only combat.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1039
+    m_Localized: The Relic
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1040
+    m_Localized: The guardian falls and the chamber goes quiet. On the altar, the relic beats with a sickly light. You can break the curse or claim its power.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1041
+    m_Localized: Destroy the relic and seal the chamber
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1042
+    m_Localized: Keep the relic and walk away
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1043
+    m_Localized: Good Ending
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1044
+    m_Localized: With one final strike you shatter the relic and the curse disperses. You leave wounded, but the dungeon will not claim anyone else.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1045
+    m_Localized: Neutral Ending
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1046
+    m_Localized: You leave the dungeon carrying knowledge or power, but not peace. Your name will be remembered, though no one will know whether you chose well.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1047
+    m_Localized: Bad Ending
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1048
+    m_Localized: The guardian throws you down before the altar. The relic keeps pulsing in the dark, waiting for the next adventurer who believes they are ready.
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 486830aa09dcc384da327346a6f829c2, type: 3}
+  m_Name: node6
+  m_EditorClassIdentifier: Assembly-CSharp::DecisionNodeSO
+  id: node6
+  textKey: node6_text
+  choices:
+  - textKey: choice6_bad
+    nextNodeId: node7
+    conditions: []
+    effects:
+    - {fileID: 11400000, guid: ce45acb9dfc6b12439f7f547ad0ea576, type: 2}
+  - textKey: choice6_good
+    nextNodeId: node7
+    conditions: []
+    effects:
+    - {fileID: 11400000, guid: 5b800204907f8a9428dbcdac6bc1fc5b, type: 2}

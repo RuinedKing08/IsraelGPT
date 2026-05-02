@@ -1,0 +1,215 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: StringTable_es
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.StringTable
+  m_LocaleId:
+    m_Code: es
+  m_SharedData: {fileID: 11400000, guid: e741f29ce976e94498da6295fc1979fa, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 1001
+    m_Localized: La Mazmorra de TLS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1002
+    m_Localized: Una aventura de texto ramificada donde cada decision deja huella en la mazmorra.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1003
+    m_Localized: Iniciar aventura
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1004
+    m_Localized: Salir
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1005
+    m_Localized: Idioma
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1006
+    m_Localized: ES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007
+    m_Localized: EN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1008
+    m_Localized: Por Sergio, Mateo, Juan, Milton y Oscar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1009
+    m_Localized: Escribe tu nombre
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1010
+    m_Localized: La mazmorra recordara cada decision. Ingresa el nombre con el que enfrentaras esta travesia.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1011
+    m_Localized: Presiona Enter para continuar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1012
+    m_Localized: Nombre del aventurero
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1013
+    m_Localized: 'Aventurero: {0}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1014
+    m_Localized: 'Vida: {0}/{1}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1015
+    m_Localized: 'Dano: {0}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1016
+    m_Localized: 'Valentia: {0}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1017
+    m_Localized: Inventario
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1018
+    m_Localized: 'Inventario: vacio'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1019
+    m_Localized: Reiniciar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1020
+    m_Localized: Menu principal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1021
+    m_Localized: El umbral
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1022
+    m_Localized: La puerta de hierro de la mazmorra respira un aire frio. A un lado, un brasero roto esconde un brillo tenue. Al otro, un viejo cuidador te observa en silencio, como si esperara tu primera decision.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1023
+    m_Localized: Examinar el brasero roto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1024
+    m_Localized: Hablar con el cuidador
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1025
+    m_Localized: Patio quebrado
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1026
+    m_Localized: Cruzas el patio interior con una pequena pocion guardada bajo el brazo. A tu izquierda yace un archivo derrumbado; al frente, un porton espinoso late con energia oscura.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1027
+    m_Localized: Entrar primero al archivo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1028
+    m_Localized: Forzar el porton espinoso
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1029
+    m_Localized: La advertencia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1030
+    m_Localized: El cuidador te ofrece un mapa incompleto y te advierte que el guardian de la camara responde al miedo. Sus palabras no curan, pero afilan la voluntad.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1031
+    m_Localized: Aceptar el mapa y rodear por el archivo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1032
+    m_Localized: Ignorar la advertencia y avanzar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1033
+    m_Localized: Archivo derrumbado
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1034
+    m_Localized: Entre libros humedos y runas rotas encuentras notas sobre el guardian. Aprendes donde golpear y tambien descubres una salida discreta hacia la superficie.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1035
+    m_Localized: Tomar las runas y enfrentar al guardian
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1036
+    m_Localized: Escapar con el conocimiento y dejar la reliquia atras
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1037
+    m_Localized: El guardian
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1038
+    m_Localized: Al abrirse la camara central, un lobo de sombra emerge de la neblina y se lanza sobre ti. No hay mas palabras. Solo combate.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1039
+    m_Localized: La reliquia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1040
+    m_Localized: El guardian cae y la camara queda en silencio. Sobre el altar, la reliquia late con una luz enfermiza. Puedes romper la maldicion o reclamar su poder.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1041
+    m_Localized: Destruir la reliquia y sellar la sala
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1042
+    m_Localized: Guardar la reliquia y marcharte
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1043
+    m_Localized: Final bueno
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1044
+    m_Localized: Con un ultimo golpe, rompes la reliquia y la maldicion se disipa. Sales herido, pero la mazmorra ya no reclamara a nadie mas.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1045
+    m_Localized: Final neutral
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1046
+    m_Localized: Abandonas la mazmorra con conocimiento o poder, pero no con paz. Tu nombre sera recordado, aunque nadie sabra si hiciste lo correcto.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1047
+    m_Localized: Final malo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1048
+    m_Localized: El guardian te derriba frente al altar. La reliquia sigue latiendo en la oscuridad, esperando al siguiente aventurero que crea estar listo.
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []
