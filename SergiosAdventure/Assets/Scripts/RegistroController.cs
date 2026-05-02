@@ -9,6 +9,14 @@ public class RegistroController : MonoBehaviour
 {
     const string AdventureSceneName = "Adventure";
 
+    [Header("Optional Stat Inputs")]
+    [SerializeField] TMP_InputField healthInputField;
+    [SerializeField] TMP_InputField damageInputField;
+    [SerializeField] TMP_InputField braveryInputField;
+    [SerializeField] int defaultHealth = 20;
+    [SerializeField] int defaultDamage = 4;
+    [SerializeField] int defaultBravery;
+
     TMP_InputField nameInputField;
     bool isTransitioning;
 
@@ -81,7 +89,23 @@ public class RegistroController : MonoBehaviour
 
         isTransitioning = true;
         PlayerSession.SetPlayerName(trimmedName);
+        PlayerSession.SetPlayerStats(
+            ReadStat(healthInputField, defaultHealth, 1),
+            ReadStat(damageInputField, defaultDamage, 1),
+            ReadStat(braveryInputField, defaultBravery, 0));
         SceneManager.LoadScene(AdventureSceneName);
+    }
+
+    int ReadStat(TMP_InputField inputField, int fallbackValue, int minimumValue)
+    {
+        if (inputField == null || string.IsNullOrWhiteSpace(inputField.text))
+        {
+            return Mathf.Max(minimumValue, fallbackValue);
+        }
+
+        return int.TryParse(inputField.text.Trim(), out int value)
+            ? Mathf.Max(minimumValue, value)
+            : Mathf.Max(minimumValue, fallbackValue);
     }
 
     void FocusInputField()
