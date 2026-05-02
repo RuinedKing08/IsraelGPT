@@ -3,6 +3,7 @@ using System;
 
 namespace SergiosAdventure.GraphToolkit.Editor
 {
+    [Serializable]
     public class CombatNode : Node
     {
         protected override void OnDefineOptions(IOptionDefinitionContext context)

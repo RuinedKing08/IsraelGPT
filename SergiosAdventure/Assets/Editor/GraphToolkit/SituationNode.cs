@@ -5,6 +5,7 @@ using UnityEditor;
 
 namespace SergiosAdventure.GraphToolkit.Editor
 {
+    [Serializable]
     public class SituationNode : Node
     {
         protected override void OnDefineOptions(IOptionDefinitionContext context)

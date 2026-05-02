@@ -12,5 +12,85 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9efa0b24d69cb3f4abef39551a038cf3, type: 3}
   m_Name: Help
   m_EditorClassIdentifier: Assembly-CSharp::RuntimeStoryGraph
-  startNodeId: start
-  nodes: []
+  startNodeId: start_id
+  nodes:
+  - id: situation_1
+    title: new day
+    body: juan is attack
+    type: 1
+    enemyId: 
+    choices:
+    - text: stay home
+      nextNodeId: ending_1
+      healthChange: 0
+      damageChange: 0
+      courageChange: 0
+      grantedItemId: 
+      flagToSet: 
+    - text: go attac
+      nextNodeId: situation_2
+      healthChange: 0
+      damageChange: 0
+      courageChange: 0
+      grantedItemId: 
+      flagToSet: 
+  - id: ending_1
+    title: stay hom
+    body: you do nothing and sleep it off
+    type: 3
+    enemyId: 
+    choices:
+    - text: stay home
+      nextNodeId: situation_2
+      healthChange: 0
+      damageChange: 0
+      courageChange: 0
+      grantedItemId: 
+      flagToSet: 
+    - text: go attac
+      nextNodeId: situation_3
+      healthChange: 0
+      damageChange: 0
+      courageChange: 0
+      grantedItemId: 
+      flagToSet: 
+  - id: situation_2
+    title: attac
+    body: you find juan and he challenges u
+    type: 1
+    enemyId: 
+    choices:
+    - text: run away
+      nextNodeId: ending_1
+      healthChange: 0
+      damageChange: 0
+      courageChange: 0
+      grantedItemId: 
+      flagToSet: 
+    - text: go attac
+      nextNodeId: combat_1
+      healthChange: 0
+      damageChange: 0
+      courageChange: 0
+      grantedItemId: 
+      flagToSet: 
+  - id: combat_1
+    title: faito
+    body: u vs juan
+    type: 2
+    enemyId: 
+    choices:
+    - text: run away
+      nextNodeId: ending_1
+      healthChange: 0
+      damageChange: 0
+      courageChange: 0
+      grantedItemId: 
+      flagToSet: 
+    - text: go attac
+      nextNodeId: combat_1
+      healthChange: 0
+      damageChange: 0
+      courageChange: 0
+      grantedItemId: 
+      flagToSet: 
