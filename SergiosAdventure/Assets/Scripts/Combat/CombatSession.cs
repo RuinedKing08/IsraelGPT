@@ -26,12 +26,13 @@ public static class CombatSession
     static int currentHealth = DefaultMaxHealth;
     static int maxHealth = DefaultMaxHealth;
     static int baseDamage = DefaultBaseDamage;
+    static int damageBonus;
     static PlayerCombatProfile activeProfile;
 
     public static bool IsInitialized => initialized;
     public static int CurrentHealth => currentHealth;
     public static int MaxHealth => maxHealth;
-    public static int BaseDamage => baseDamage;
+    public static int BaseDamage => Mathf.Max(1, baseDamage + damageBonus);
     public static PlayerCombatProfile ActiveProfile => activeProfile;
 
     public static void Initialize(PlayerCombatProfile profile)
@@ -49,6 +50,7 @@ public static class CombatSession
         activeProfile = profile;
         maxHealth = profile != null ? profile.MaxHealth : DefaultMaxHealth;
         baseDamage = profile != null ? profile.BaseDamage : DefaultBaseDamage;
+        damageBonus = 0;
         currentHealth = maxHealth;
         inventory.Clear();
 
@@ -72,6 +74,17 @@ public static class CombatSession
     {
         currentHealth = CombatMath.ApplyDamage(currentHealth, damage);
         return currentHealth;
+    }
+
+    public static int ApplyHealing(int healAmount)
+    {
+        currentHealth = CombatMath.ApplyHealing(currentHealth, maxHealth, healAmount);
+        return currentHealth;
+    }
+
+    public static void AddDamageBonus(int amount)
+    {
+        damageBonus = Mathf.Max(0, damageBonus + amount);
     }
 
     public static int GetItemCount(ItemDefinition item)
