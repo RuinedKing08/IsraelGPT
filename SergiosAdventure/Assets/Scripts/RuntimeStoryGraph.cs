@@ -18,6 +18,33 @@ public class RuntimeStoryGraph : ScriptableObject
             : null;
     }
 
+    public RuntimeStoryNode GetStartNode()
+    {
+        RuntimeStoryNode configuredStart = GetNode(startNodeId);
+        if (configuredStart != null)
+        {
+            return configuredStart;
+        }
+
+        RuntimeStoryNode nodeNamedStart = GetNode("start");
+        if (nodeNamedStart != null)
+        {
+            Debug.LogWarning($"Start node id '{startNodeId}' was not found. Falling back to node id 'start'.");
+            return nodeNamedStart;
+        }
+
+        foreach (RuntimeStoryNode node in nodes)
+        {
+            if (node != null && !string.IsNullOrWhiteSpace(node.id))
+            {
+                Debug.LogWarning($"Start node id '{startNodeId}' was not found. Falling back to first node '{node.id}'.");
+                return node;
+            }
+        }
+
+        return null;
+    }
+
     void EnsureLookup()
     {
         if (nodeLookup != null)
