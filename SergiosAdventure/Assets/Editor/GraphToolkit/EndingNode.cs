@@ -1,7 +1,5 @@
-using UnityEngine;
 using Unity.GraphToolkit.Editor;
 using System;
-using UnityEditor;
 
 namespace SergiosAdventure.GraphToolkit.Editor
 {
@@ -9,6 +7,16 @@ namespace SergiosAdventure.GraphToolkit.Editor
     {
         protected override void OnDefineOptions(IOptionDefinitionContext context)
         {
+            context.AddOption<string>("SituationId")
+                .WithDisplayName("Situation Id")
+                .WithDefaultValue("ending")
+                .Delayed();
+
+            context.AddOption<string>("EndingId")
+                .WithDisplayName("Ending Id")
+                .WithDefaultValue("neutral_ending")
+                .Delayed();
+
             context.AddOption<string>("EndingName")
                 .WithDisplayName("Ending Name")
                 .WithDefaultValue("Neutral Ending")
