@@ -191,6 +191,7 @@ public class GayManager : MonoBehaviour
             return;
         }
 
+        ShowCombatUi();
         waitingForCombat = true;
         combatController.BeginEncounter(enemy);
     }
@@ -340,6 +341,21 @@ public class GayManager : MonoBehaviour
         }
 
         statsText.text = $"HP: {player.GetHealth()} | DMG: {CombatSession.BaseDamage} | Bravery: {player.GetBravery()}";
+    }
+
+    private void ShowCombatUi()
+    {
+        GameObject combatObject = combatController.gameObject;
+        if (!combatObject.activeSelf)
+        {
+            combatObject.SetActive(true);
+        }
+
+        foreach (Canvas canvas in combatObject.GetComponentsInChildren<Canvas>(true))
+        {
+            canvas.gameObject.SetActive(true);
+            canvas.enabled = true;
+        }
     }
 
     private void HideChoiceButtons()
