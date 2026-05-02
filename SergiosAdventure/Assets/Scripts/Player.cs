@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.Progress;
 
 public enum StatType
 {
@@ -16,29 +15,37 @@ public class Player : MonoBehaviour
     private int attack;
     private int bravery;
 
-    private Stack<string> decisionTacker;
-    private List<Item> inventory;
+    private Stack<string> decisionTracker = new Stack<string>();
+    private List<Item> inventory = new List<Item>();
 
-    public Player(string name, int initialHealth, int initialAttack, int initialBravery)
+    private void Awake()
     {
-        playerName = name;
-        health = initialHealth;
-        attack = initialAttack;
-        bravery = initialBravery;
-        decisionTacker = new Stack<string>();
-        inventory = new List<Item>();
+        EnsureCollections();
     }
+
+    public void Initialize(string name, int initialHealth, int initialAttack, int initialBravery)
+    {
+        playerName = string.IsNullOrWhiteSpace(name) ? "Player" : name.Trim();
+        health = Mathf.Max(0, initialHealth);
+        attack = Mathf.Max(0, initialAttack);
+        bravery = initialBravery;
+        decisionTracker.Clear();
+        inventory.Clear();
+    }
+
     public void TakeDamage(int amount)
     {
         if (amount <= 0) return;
         health -= amount;
         if (health < 0) health = 0;
     }
+
     public void Heal(int amount)
     {
         if (amount <= 0) return;
         health += amount;
     }
+
     public void ModifyStat(StatType stat, int delta)
     {
         switch (stat)
@@ -56,34 +63,48 @@ public class Player : MonoBehaviour
                 break;
         }
     }
+
     public void AddItem(Item item)
     {
+        EnsureCollections();
         if (item == null) return;
         inventory.Add(item);
     }
+
     public void RemoveItem(Item item)
     {
+        EnsureCollections();
         if (item != null && inventory.Contains(item))
         {
             inventory.Remove(item);
         }
     }
+
     public void PushDecision(string decisionId)
     {
-        decisionTacker.Push(decisionId);
+        EnsureCollections();
+        if (!string.IsNullOrWhiteSpace(decisionId))
+        {
+            decisionTracker.Push(decisionId);
+        }
     }
+
     public string PopLastDecision()
     {
-        return decisionTacker.Count > 0 ? decisionTacker.Pop() : null;
+        EnsureCollections();
+        return decisionTracker.Count > 0 ? decisionTracker.Pop() : null;
     }
+
     public string PeekLastDecision()
     {
-        return decisionTacker.Count > 0 ? decisionTacker.Peek() : null;
+        EnsureCollections();
+        return decisionTracker.Count > 0 ? decisionTracker.Peek() : null;
     }
 
     public Stack<string> GetDecisionTracker()
     {
-        return new Stack<string>(decisionTacker);
+        EnsureCollections();
+        return new Stack<string>(decisionTracker);
     }
 
     public string GetName() => playerName;
@@ -91,8 +112,17 @@ public class Player : MonoBehaviour
     public int GetAttack() => attack;
     public int GetBravery() => bravery;
     public bool IsAlive() => health > 0;
-    public int GetInventoryCount() => inventory.Count;
-    public bool HasItem(Item item) => inventory.Contains(item);
+    public int GetInventoryCount()
+    {
+        EnsureCollections();
+        return inventory.Count;
+    }
+
+    public bool HasItem(Item item)
+    {
+        EnsureCollections();
+        return inventory.Contains(item);
+    }
 
     public int GetStatValue(StatType stat)
     {
@@ -104,11 +134,27 @@ public class Player : MonoBehaviour
             default: return 0;
         }
     }
+
     public Item GetItemAtIndex(int index)
     {
+        EnsureCollections();
         if (index >= 0 && index < inventory.Count)
+        {
             return inventory[index];
+        }
+
         return null;
     }
-    public List<Item> GetAllItems() => new List<Item>(inventory);
+
+    public List<Item> GetAllItems()
+    {
+        EnsureCollections();
+        return new List<Item>(inventory);
+    }
+
+    private void EnsureCollections()
+    {
+        decisionTracker ??= new Stack<string>();
+        inventory ??= new List<Item>();
+    }
 }
