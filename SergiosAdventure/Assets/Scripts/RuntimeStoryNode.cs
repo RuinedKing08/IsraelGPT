@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-using static TreeEditor.TreeEditorHelper;
 
 [System.Serializable]
 public class RuntimeStoryNode
