@@ -12,6 +12,7 @@ public static class AdventureGraphExporter
 
         if (selectedObject == null)
         {
+            Debug.LogWarning("Select an Adventure Graph asset before exporting.");
             return;
         }
 
@@ -19,6 +20,7 @@ public static class AdventureGraphExporter
 
         if (string.IsNullOrEmpty(graphPath))
         {
+            Debug.LogWarning("The selected object is not a project asset.");
             return;
         }
 
@@ -26,15 +28,22 @@ public static class AdventureGraphExporter
 
         if (editorGraph == null)
         {
+            Debug.LogWarning("The selected asset is not an Adventure Graph.");
             return;
         }
 
         RuntimeStoryGraph runtimeGraph = ScriptableObject.CreateInstance<RuntimeStoryGraph>();
+        runtimeGraph.startNodeId = ResolveStartNodeId(editorGraph);
         runtimeGraph.nodes.Clear();
 
         foreach (RuntimeStoryNode node in editorGraph.runtimeNodes)
         {
-            runtimeGraph.nodes.Add(node);
+            if (node == null || string.IsNullOrWhiteSpace(node.id))
+            {
+                continue;
+            }
+
+            runtimeGraph.nodes.Add(CloneNode(node));
         }
 
         string path = EditorUtility.SaveFilePanelInProject(
@@ -45,12 +54,62 @@ public static class AdventureGraphExporter
         );
 
         if (string.IsNullOrEmpty(path))
+        {
             return;
+        }
 
         AssetDatabase.CreateAsset(runtimeGraph, path);
         AssetDatabase.SaveAssets();
         AssetDatabase.Refresh();
 
-        Debug.Log("Runtime story graph exported successfully.");
+        Debug.Log($"Runtime story graph exported successfully to {path}.");
+    }
+
+    private static string ResolveStartNodeId(AdventureGraph editorGraph)
+    {
+        foreach (RuntimeStoryNode node in editorGraph.runtimeNodes)
+        {
+            if (node != null && node.id == "start")
+            {
+                return node.id;
+            }
+        }
+
+        return editorGraph.runtimeNodes.Count > 0 && editorGraph.runtimeNodes[0] != null
+            ? editorGraph.runtimeNodes[0].id
+            : "start";
+    }
+
+    private static RuntimeStoryNode CloneNode(RuntimeStoryNode source)
+    {
+        RuntimeStoryNode clone = new RuntimeStoryNode
+        {
+            id = source.id,
+            title = source.title,
+            body = source.body,
+            type = source.type,
+            enemyId = source.enemyId
+        };
+
+        foreach (RuntimeStoryChoice choice in source.choices)
+        {
+            if (choice == null)
+            {
+                continue;
+            }
+
+            clone.choices.Add(new RuntimeStoryChoice
+            {
+                text = choice.text,
+                nextNodeId = choice.nextNodeId,
+                healthChange = choice.healthChange,
+                damageChange = choice.damageChange,
+                courageChange = choice.courageChange,
+                grantedItemId = choice.grantedItemId,
+                flagToSet = choice.flagToSet
+            });
+        }
+
+        return clone;
     }
 }
