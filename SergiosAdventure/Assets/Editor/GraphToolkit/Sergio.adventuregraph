@@ -61,10 +61,10 @@ MonoBehaviour:
         m_LocalSubgraphs: []
         m_LastKnownBounds:
           serializedVersion: 2
-          x: 255
-          y: -131
-          width: 1261
-          height: 733
+          x: 255.2
+          y: -131.20001
+          width: 1261.6
+          height: 732.8
         m_GraphElementMetaData:
         - m_Guid:
             m_Value0: 11005270291279960098

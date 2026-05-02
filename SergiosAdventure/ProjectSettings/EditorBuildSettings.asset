@@ -15,5 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Adventure.unity
     guid: 05436df6ecf418a49a501d899ab6bc9b
   m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: bfa6c6709fe862647a1c839b1b4d2f36, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+    com.unity.localization.settings: {fileID: 11400000, guid: cbd7bc9f3ee1a864ea5c4606b78d51fb, type: 2}
   m_UseUCBPForAssetBundles: 0
