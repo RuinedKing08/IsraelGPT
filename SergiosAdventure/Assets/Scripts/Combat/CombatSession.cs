@@ -70,6 +70,15 @@ public static class CombatSession
         initialized = true;
     }
 
+    public static void ConfigurePlayerStats(int newMaxHealth, int newBaseDamage)
+    {
+        maxHealth = Mathf.Max(1, newMaxHealth);
+        baseDamage = Mathf.Max(1, newBaseDamage);
+        damageBonus = 0;
+        currentHealth = maxHealth;
+        initialized = true;
+    }
+
     public static int ApplyDamage(int damage)
     {
         currentHealth = CombatMath.ApplyDamage(currentHealth, damage);
