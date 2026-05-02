@@ -21,7 +21,6 @@ public class GayManager : MonoBehaviour
     [SerializeField] private TMP_Text choiceText1;
     [SerializeField] private TMP_Text choiceText2;
 
-    [Header("Fallback Player Stats")]
     [SerializeField] private int initialHealth = 20;
     [SerializeField] private int initialDamage = 4;
     [SerializeField] private int initialBravery;
@@ -63,24 +62,12 @@ public class GayManager : MonoBehaviour
     private void LoadStartNode()
     {
         RuntimeStoryNode startNode = storyGraph.GetStartNode();
-        if (startNode == null)
-        {
-            Debug.LogError("Runtime story graph has no valid nodes.");
-            return;
-        }
-
         LoadNode(startNode.id);
     }
 
     private void LoadNode(string nodeId)
     {
         currentNode = storyGraph.GetNode(nodeId);
-
-        if (currentNode == null)
-        {
-            Debug.LogError("Node not found: " + nodeId);
-            return;
-        }
 
         titleText.text = currentNode.title;
         bodyText.text = currentNode.body;
@@ -222,7 +209,6 @@ public class GayManager : MonoBehaviour
 
         if (currentNode == null || choiceIndex >= currentNode.choices.Count)
         {
-            Debug.LogWarning("Combat node does not have a " + (victory ? "victory" : "defeat") + " route.");
             return;
         }
 
@@ -233,7 +219,6 @@ public class GayManager : MonoBehaviour
     private void ShowEnding(RuntimeStoryNode node)
     {
         string endingLabel = string.IsNullOrWhiteSpace(node.endingName) ? node.title : node.endingName;
-        Debug.Log($"Ending reached: {endingLabel} ({node.endingId})");
     }
 
     private EnemyDefinition ResolveEnemy(string enemyId)
