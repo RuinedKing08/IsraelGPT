@@ -1,7 +1,5 @@
-using UnityEngine;
 using Unity.GraphToolkit.Editor;
 using System;
-using UnityEditor;
 
 namespace SergiosAdventure.GraphToolkit.Editor
 {
@@ -14,18 +12,27 @@ namespace SergiosAdventure.GraphToolkit.Editor
                 .WithDefaultValue("combat")
                 .Delayed();
 
-            context.AddOption<string>("EnemyName")
-                .WithDisplayName("Enemy Name")
-                .WithDefaultValue("Enemy")
+            context.AddOption<string>("EnemyId")
+                .WithDisplayName("Enemy Id")
+                .WithDefaultValue("DebugWolf")
+                .Delayed();
+
+            context.AddOption<string>("VictoryNodeId")
+                .WithDisplayName("Victory Node Id")
+                .WithDefaultValue("")
+                .Delayed();
+
+            context.AddOption<string>("DefeatNodeId")
+                .WithDisplayName("Defeat Node Id")
+                .WithDefaultValue("")
                 .Delayed();
         }
 
         protected override void OnDefinePorts(IPortDefinitionContext context)
         {
             context.AddInputPort("Previous").Build();
-            context.AddOutputPort("Win").Build();
-            context.AddOutputPort("Lose").Build();
+            context.AddOutputPort("Victory").Build();
+            context.AddOutputPort("Defeat").Build();
         }
     }
-
 }
