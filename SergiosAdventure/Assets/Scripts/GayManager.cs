@@ -289,11 +289,34 @@ public class GayManager : MonoBehaviour
 
         CombatSession.Initialize(playerProfile);
 
-        int health = playerProfile != null ? playerProfile.MaxHealth : initialHealth;
-        int damage = playerProfile != null ? playerProfile.BaseDamage : initialDamage;
+        int health = ResolveInitialHealth();
+        int damage = ResolveInitialDamage();
+        int bravery = PlayerSession.HasCustomStats ? PlayerSession.InitialBravery : initialBravery;
         string playerName = string.IsNullOrWhiteSpace(PlayerSession.PlayerName) ? "Jugador" : PlayerSession.PlayerName;
-        player.Initialize(playerName, health, damage, initialBravery);
+
+        CombatSession.ConfigurePlayerStats(health, damage);
+        player.Initialize(playerName, health, damage, bravery);
         RefreshStatsText();
+    }
+
+    private int ResolveInitialHealth()
+    {
+        if (PlayerSession.HasCustomStats)
+        {
+            return PlayerSession.InitialHealth;
+        }
+
+        return playerProfile != null ? playerProfile.MaxHealth : initialHealth;
+    }
+
+    private int ResolveInitialDamage()
+    {
+        if (PlayerSession.HasCustomStats)
+        {
+            return PlayerSession.InitialDamage;
+        }
+
+        return playerProfile != null ? playerProfile.BaseDamage : initialDamage;
     }
 
     private void SyncPlayerHealthFromCombat(int combatHealth)
